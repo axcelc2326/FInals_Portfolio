@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Profile Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>My Personal Profile Dashboard</h1>
+
+    <!-- Profile Section -->
+    <section class="profile">
+      <h2><i class="fas fa-user-circle"></i> John Axcel Cervantes</h2>
+
+      <!-- Profile Picture -->
+      <div class="profile-pic">
+        <img src="Profile.png" alt="John Axcel Cervantes" id="profileImage">
+      </div>
+
+      <p><strong><i class="fas fa-heart"></i> Hobbies:</strong> Coding, Gaming, Reading</p>
+
+      <!-- Favorite Quotes with Random Button -->
+      <div class="favorite-quote">
+        <label><strong>Favorite Quote:</strong></label><br>
+        <button id="randomQuote">🎲 Random Quote</button>
+        <p id="selectedQuote" class="quote-display">Click the button to get a random quote!</p>
+      </div>
+
+      <!-- Fun Facts -->
+      <button id="toggleFunFacts"><i class="fas fa-lightbulb"></i> Show Fun Facts</button>
+      <ul id="funFacts" style="display: none;">
+        <li>I love hiking.</li>
+        <li>I'm a night owl.</li>
+        <li>I drink a lot of coffee.</li>
+      </ul>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+      <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Name" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <textarea id="message" placeholder="Your message" required></textarea><br>
+        <input type="text" id="datepicker" placeholder="📅 Pick a Date">
+        <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+      </form>
+      <div id="formSuccess" class="success-message">Message Sent Successfully!</div>
+    </section>
+
+    <!-- GitHub API Section -->
+    <section class="api-data">
+      <h2><i class="fab fa-github"></i> GitHub Profile</h2>
+      <button id="fetchGithub"><i class="fas fa-download"></i> Load My GitHub Info</button>
+      <div id="githubData" class="github-card"></div>
+    </section>
+
+    <!-- Accordion Section -->
+    <section class="accordion-section">
+      <h2><i class="fas fa-code"></i> My Skills</h2>
+      <div id="accordion">
+        <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+        <div><p>HTML, CSS, JavaScript, React</p></div>
+        <h3><i class="fas fa-server"></i> Backend</h3>
+        <div><p>Node.js, PHP, MySQL</p></div>
+        <h3><i class="fas fa-tools"></i> Other Skills</h3>
+        <div><p>Problem-solving, Communication</p></div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
